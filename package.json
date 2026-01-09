@@ -3,6 +3,9 @@
   "version" : "0.0.2",
   "description" : "Standard AEM site theme",
   "license" : "MIT License, Copyright 2020 Adobe Systems Incorporated",
+  "engines" : {
+    "node" : ">=16.0.0"
+  },
   "scripts" : {
     "build" : "rimraf dist && parcel build src/theme.ts",
     "watch" : "parcel watch src/theme.ts",

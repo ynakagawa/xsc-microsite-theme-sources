@@ -4,9 +4,16 @@ This is the theme of the standard site template for Adobe Experience Manager (AE
 
 This theme can be modified to customize the visual appearance of sites created from the standard site template and deployed using the [AEM Front-End Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/developing-with-front-end-pipelines.html?lang=en) in Cloud Manager.
 
-## Suported Node version(s)
+## Supported Node version(s)
 
-By default Cloud Manager will use Node 14 to execute the Front-End Pipeline. Versions 12 and 16 are also available for the pipeline and can be selected by using the `NODE_VERSION` [CM pipeline variable](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/getting-started/project-creation/build-environment.html?lang=en#pipeline-variables).
+This theme requires **Node.js 16 or higher** due to Parcel 2.7.0 dependencies. 
+
+By default Cloud Manager will use Node 14 to execute the Front-End Pipeline. You **must** configure the pipeline to use Node 16 by setting the `NODE_VERSION` [CM pipeline variable](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/getting-started/project-creation/build-environment.html?lang=en#pipeline-variables) to `16`.
+
+To configure this in Cloud Manager:
+1. Go to your Front-End Pipeline configuration
+2. Add a pipeline variable: `NODE_VERSION` = `16`
+3. Save and run the pipeline
 
 ## Structure
 
